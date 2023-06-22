@@ -1,0 +1,19 @@
+﻿@model SEDC.PizzaApp.ViewModels.PizzaViewModel
+
+<div class="card">
+    <div class="card-header">
+        <h4>@Model.Name</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Price:</strong> @Model.Price</p>
+        <p><strong>Pizza Size:</strong> @Model.PizzaSize</p>
+        @if (Model.IsOnPromotion)
+        {
+            <h6 class="text-success">On Promotion</h6>
+        }
+        else
+        {
+            <h6 class="text-danger">Not on Promotion</h6>
+        }
+    </div>
+</div>

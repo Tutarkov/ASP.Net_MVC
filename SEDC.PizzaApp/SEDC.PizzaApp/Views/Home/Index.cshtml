@@ -1,0 +1,15 @@
+﻿@model List<SEDC.PizzaApp.ViewModels.PizzaViewModel>
+
+<h1>Welcome to our Pizza App!</h1>
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Pizza List</h2>
+
+@foreach (var pizza in Model)
+{
+    Html.RenderPartial("_PizzaDetails", pizza);
+}
